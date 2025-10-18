@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>Andreea Total Bygg AB – Stockholm</title>
+    <meta name="description" content="Andreea Total Bygg AB – Bygg & renovering i Stockholm: invändig renovering, fasader, tak, snickeri, hus & garage."/>
+    <link rel="stylesheet" href="styles.css"/>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container nav">
+        <div class="brand">
+          <img src="assets/logo.png" alt="Andreea Total Bygg AB logo" onerror="this.style.display='none'"/>
+          <div>Andreea Total Bygg AB</div>
+        </div>
+        <nav class="menu">
+          <a href="#home" data-i="nav-home">Hem</a>
+          <a href="#services" data-i="nav-services">Tjänster</a>
+          <a href="#gallery" data-i="nav-gallery">Galleri</a>
+          <a href="#about" data-i="nav-about">Om oss</a>
+          <a href="#quote" class="pill primary" data-i="nav-quote">Offert</a>
+        </nav>
+        <div class="lang">
+          <button id="btn-sv" class="active" onclick="setLang('sv')">SV</button>
+          <button id="btn-en" onclick="setLang('en')">EN</button>
+          <button id="btn-ro" onclick="setLang('ro')">RO</button>
+        </div>
+      </div>
+    </header>
+
+    <main id="home" class="hero">
+      <div class="container grid grid-2">
+        <div>
+          <h1 id="hero-title">Bygg & renovering i Stockholm med fokus på kvalitet</h1>
+          <p id="hero-sub" class="lead">Invändiga renoveringar, fasader, tak, väggar, snickeri, hus och garage — levererat i tid med noggrannhet.</p>
+          <div class="cta">
+            <a href="#quote" class="btn primary" id="cta1">Begär offert</a>
+            <a href="#contact" class="btn" id="cta2">Kontakta oss</a>
+          </div>
+          <div style="margin-top:14px;display:flex;gap:8px;flex-wrap:wrap">
+            <span class="btn" style="border-color:#1F2E3C;color:#1F2E3C">Kvalitet</span>
+            <span class="btn" style="border-color:#1F2E3C;color:#1F2E3C">Pålitligt team</span>
+            <span class="btn" style="border-color:#1F2E3C;color:#1F2E3C">Snabba svar</span>
+          </div>
+        </div>
+        <div class="grid grid-3">
+          <div class="card">Renovări interioare</div>
+          <div class="card">Fațade</div>
+          <div class="card">Acoperișuri</div>
+          <div class="card">Pereți & structuri</div>
+          <div class="card">Tâmplărie</div>
+          <div class="card">Case & Garaje</div>
+        </div>
+      </div>
+    </main>
+
+    <section id="services" class="section">
+      <div class="container">
+        <h2 id="services-title">Våra tjänster</h2>
+        <div id="services-list" class="grid grid-3" style="margin-top:16px"></div>
+      </div>
+    </section>
+
+    <section id="gallery" class="section">
+      <div class="container">
+        <h2 id="gallery-title">Galleri från våra projekt</h2>
+        <div class="gallery" style="margin-top:16px">
+          <div class="ph"><img src="assets/example1.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:none"/></div>
+          <div class="ph"></div><div class="ph"></div><div class="ph"></div>
+          <div class="ph"></div><div class="ph"></div><div class="ph"></div><div class="ph"></div>
+        </div>
+        <p class="muted" style="margin-top:8px">Înlocuiește <code>assets/example1.jpg</code> și adaugă propriile poze în <code>assets/</code>.</p>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container grid grid-2">
+        <div class="card">
+          <h2 id="about-title">Om Andreea Total Bygg AB</h2>
+          <p id="about-text" class="muted">Vi är ett engagerat byggteam baserat i Stockholm...</p>
+        </div>
+        <div class="card" id="contact">
+          <h2 id="contact-title">Kontakt</h2>
+          <p><strong id="contact-address-title">Adress</strong>: <span id="contact-address"></span></p>
+          <p><strong id="contact-email-title">E-post</strong>: <a id="contact-email" href="#"></a></p>
+          <p><strong id="contact-phone-title">Telefon</strong>: <a id="contact-phone" href="#"></a></p>
+          <div style="margin-top:10px;display:flex;gap:10px">
+            <a href="#quote" class="btn primary">Offert</a>
+            <a id="contact-email2" class="btn" href="mailto:andreeatotalbygg@gmail.com">Email</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="quote" class="section">
+      <div class="container">
+        <div class="card">
+          <h2 id="quote-title">Begär offert / kostnadsförslag</h2>
+          <form id="quote-form" class="form-grid" method="get">
+            <div>
+              <label id="label-name">Namn</label>
+              <input name="name" required placeholder="Anna Andersson"/>
+            </div>
+            <div>
+              <label id="label-phone">Telefon</label>
+              <input name="phone" placeholder="07…"/>
+            </div>
+            <div>
+              <label id="label-email">E-post</label>
+              <input name="email" type="email" required placeholder="namn@exempel.se"/>
+            </div>
+            <div>
+              <label id="label-service">Typ av arbete</label>
+              <input name="service" placeholder="Kök, badrum, fasad…"/>
+            </div>
+            <div class="full">
+              <label id="label-message">Beskrivning</label>
+              <textarea name="message" placeholder=""></textarea>
+            </div>
+            <div class="full">
+              <label><input type="checkbox" required/> <span id="label-consent">Jag godkänner…</span></label>
+            </div>
+            <div class="full"><input id="submit" class="btn primary" type="submit" value="Skicka förfrågan"/></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container foot grid grid-2">
+        <div>
+          <strong>Andreea Total Bygg AB</strong><br/>
+          <small class="muted" id="rights">© 2025 Andreea Total Bygg AB. Alla rättigheter förbehållna.</small>
+        </div>
+        <div>
+          <strong id="quick-links">Snabblänkar</strong><br/>
+          <a href="#services">Tjänster</a> · <a href="#gallery">Galleri</a> · <a href="#about">Om oss</a> · <a href="#quote">Offert</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <div class="whatsapp-float">
+      <a href="https://wa.me/46763073630" target="_blank" rel="noopener">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M19.11 17.61c-.26-.13-1.53-.76-1.77-.85-.24-.09-.41-.13-.59.13-.18.26-.68.85-.84 1.02-.15.18-.31.2-.57.07-.26-.13-1.08-.4-2.06-1.28-.76-.68-1.27-1.52-1.42-1.78-.15-.26-.02-.4.11-.53.11-.11.26-.28.39-.42.13-.15.17-.24.26-.41.09-.18.04-.33-.02-.46-.06-.13-.59-1.41-.81-1.94-.21-.51-.42-.44-.59-.45-.15-.01-.33-.01-.5-.01-.18 0-.46.07-.7.33-.24.26-.92.9-.92 2.2s.94 2.55 1.07 2.73c.13.18 1.85 2.82 4.49 3.95.63.27 1.12.43 1.5.55.63.2 1.21.17 1.67.1.51-.08 1.53-.63 1.75-1.25.22-.62.22-1.16.15-1.28-.06-.11-.24-.18-.5-.3zM16 3C8.82 3 3 8.82 3 16c0 2.3.62 4.46 1.7 6.31L3 29l6.86-1.69C11.63 28.34 13.73 29 16 29c7.18 0 13-5.82 13-13S23.18 3 16 3z"/></svg>
+        WhatsApp
+      </a>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

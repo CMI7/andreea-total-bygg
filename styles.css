@@ -1,0 +1,55 @@
+:root{
+  --bg:#f7f7f8; --fg:#111827; --muted:#6b7280;
+  --brand:#1F2E3C; --accent:#C53A2F;
+  --card:#ffffff; --border:#e5e7eb;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--fg);background:var(--bg)}
+.container{max-width:1100px;margin:0 auto;padding:0 16px}
+.header{position:sticky;top:0;background:rgba(255,255,255,.85);backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid var(--border);z-index:10}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:16px}
+.brand{
+  display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.2px
+}
+.brand img{height:42px;width:auto;border-radius:8px;display:block}
+.badge{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:var(--brand);color:#fff}
+.menu a{padding:8px 10px;border-radius:10px;text-decoration:none;color:var(--fg)}
+.menu a:hover{background:#f3f4f6}
+.menu .pill{padding:10px 14px;border:1px solid var(--border)}
+.menu .primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.lang button{padding:6px 10px;border:1px solid var(--border);border-radius:10px;background:#fff;margin-left:6px;cursor:pointer}
+.lang .active{background:var(--brand);color:#fff;border-color:var(--brand)}
+.hero{padding:56px 0}
+h1{font-size:38px;line-height:1.1;margin:0}
+.lead{margin-top:12px;color:var(--muted);font-size:18px}
+.cta{margin-top:18px;display:flex;gap:10px;flex-wrap:wrap}
+.btn{padding:12px 16px;border-radius:14px;border:1px solid var(--border);background:#fff;cursor:pointer;text-decoration:none;color:var(--fg)}
+.btn.primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+.grid{display:grid;gap:20px}
+.grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (max-width:900px){.grid-3{grid-template-columns:1fr}.grid-2{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:18px}
+.section{padding:44px 0}
+.gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+@media (max-width:900px){.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.gallery .ph{aspect-ratio:4/3;background:#e5e7eb;border-radius:14px;border:1px solid var(--border);overflow:hidden}
+footer{border-top:1px solid var(--border);margin-top:24px}
+footer .foot{padding:24px 0}
+small.muted{color:var(--muted)}
+label{display:block;font-size:14px;margin-bottom:6px}
+input,textarea{width:100%;padding:12px;border:1px solid var(--border);border-radius:12px}
+textarea{min-height:120px;resize:vertical}
+.form-grid{display:grid;gap:14px;grid-template-columns:repeat(2,minmax(0,1fr))}
+.form-grid .full{grid-column:1/-1}
+
+/* Floating WhatsApp button */
+.whatsapp-float{
+  position:fixed;right:18px;bottom:18px;z-index:50;
+}
+.whatsapp-float a{
+  display:flex;align-items:center;gap:10px;
+  background:#25D366;color:#fff;text-decoration:none;
+  padding:12px 16px;border-radius:999px;font-weight:600;box-shadow:0 6px 18px rgba(0,0,0,.15);
+}
+.whatsapp-float svg{width:20px;height:20px;fill:#fff}
