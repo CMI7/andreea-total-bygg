@@ -16,6 +16,8 @@ html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,
   letter-spacing: .2px;
   line-height: 1;
   margin-left: 20px;
+  font-size: 20px;
+  color: #333;
 }
 
 .brand img {
